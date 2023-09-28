@@ -14,13 +14,26 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
-        /* Agregar estilos personalizados aquí */
-        body {
-            font-family: 'Poppins', sans-serif;
+        /* Reset de estilos */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
+
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
         /* Estilos para el encabezado */
         header {
             background-color: #333;
@@ -28,48 +41,58 @@
             text-align: center;
             padding: 20px 0;
         }
+
         header .title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header .hh-title {
             font-size: 24px;
         }
-        header .hh-title {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+
         /* Estilos para el área de entrada de texto */
         #console {
             background-color: #fff;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin: 20px;
+            margin: 20px 0;
         }
+
         .textarea {
             width: 100%;
-            padding: 10px;
+            padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
-        /* Estilos para el botón de comprobación */
+
         #btnChecar {
             background-color: #333;
             color: #fff;
-            padding: 10px 20px;
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
-            margin-top: 10px;
+            font-size: 18px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
+
         #btnChecar:hover {
             background-color: #555;
         }
+
         /* Estilos para el separador */
         hr.separador {
             border: 0;
             height: 1px;
             background: #ccc;
-            margin: 20px 0;
+            margin: 40px 0;
         }
+
         /* Estilos para el pie de página */
         footer {
             background-color: #333;
@@ -77,10 +100,12 @@
             text-align: center;
             padding: 20px 0;
         }
+
         footer a {
             color: #fff;
             text-decoration: none;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -88,46 +113,40 @@
 </head>
 <body>
     <header>
-        <div class="title">
-            <img src="assets/img/cc.svg" alt="Icon" /> SAMPLIFE CHECKER
-        </div>
-        <div class="hh-title">Credit Card Checker</div>
-        <div class="p" id="cards">
-            <i class="fab fa-cc-visa"></i>
-            <i class="fab fa-cc-mastercard"></i>
-            <i class="fab fa-cc-amex"></i>
-            <i class="fab fa-cc-discover"></i>
-            <i class="fab fa-cc-jcb"></i>
-            <i class="fab fa-cc-diners-club"></i>
-        </div>
+        <container>
+            <div class="title">
+                <img src="assets/img/cc.svg" alt="Icon" /> SAMPLIFE CHECKER
+            </div>
+            <div class="hh-title">Credit Card Checker</div>
+        </container>
     </header>
-    <div id="console">
-        <div class="eighty">
-            <textarea class="textarea" id="textarea" rows="10"></textarea>
+    <container>
+        <div id="console">
+            <div class="eighty">
+                <textarea class="textarea" id="textarea" rows="10"></textarea>
+            </div>
+            <button id="btnChecar" class="Lbutton">
+                <i class="fas fa-spinner"></i> Check Card
+            </button>
+            <div id="datos"></div>
+            <div id="infos"></div>
         </div>
-        <button id="btnChecar" class="Lbutton">
-            <i class="fas fa-spinner"></i> Check Card
-        </button>
-        <div id="datos"></div>
-        <div id="infos"></div>
-    </div>
+    </container>
     <hr class="separador" />
     <footer>
-        <p class="boldy main"><i class="fas fa-globe"></i> Samplife</p>
-        <p class="boldy info">
-            <i class="far fa-circle-info"></i> Samplife is a totally free Mass Credit Card Checker
-        </p>
-        <p class="boldy">
-            <i class="far fa-heart"></i> Free, No Ads & Open Source
-        </p>
-        <p class="boldy">
-            <i class="far fa-credit-card"></i> SC:
-            <a href="https://github.com/yaelsito/YaelChecker" target="_blank" rel="noopener">Here</a>
-        </p>
-        <p class="boldy info">
-            <i class="far fa-copyright"></i> Copyright:
-            <span id="date"></span>
-        </p>
+        <container>
+            <p class="boldy main"><i class="fas fa-globe"></i> Samplife</p>
+            <p class="boldy info">
+                <i class="far fa-circle-info"></i> Samplife is a totally free Mass Credit Card Checker
+            </p>
+            <p class="boldy">
+                <i class="far fa-heart"></i> Free, No Ads & Open Source
+            </p>
+            <p class="boldy">
+                <i class="far fa-credit-card"></i> SC:
+                <a href="https://github.com/yaelsito/YaelChecker" target="_blank" rel="noopener">Here</a>
+            </p>
+        </container>
     </footer>
     <script src="assets/js/engine.js"></script>
 </body>
