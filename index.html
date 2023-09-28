@@ -1,144 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAMPLIFE | CHECKER</title>
-    <meta name="description" content="Credit Card Checker">
-    <meta name="keywords" content="namso, ccgen, ccgen online, namso online, card, cc, bin, generador tarjetas, tarjetas, generador, bin check, bin search, bin find, find bin, check bin, search bin, bank identification number, bin, iin, issuer identification number, check iin, find iin, search iin, iin check, iin search, iin find, bank, card search, card check, card find, merchant bin, merchant, bin lookup, bin checker, bin list, carding, carder, generate cc, namso, ccgen, credit card, infocc, bin, gerador de cartões de créditos, tarjetas, generator, darkside, checker cc, gerador, bins, gerar cc, mastercard, visa, amex, discover, diners club">
-    <meta name="author" content="SAMPLIFE">
-    <link rel="icon" href="assets/img/cc.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Credit Card Checker" />
+    <meta name="keywords" content="namso,ccgen,ccgen online,namso online, card, cc, bin,generador tarjetas,tarjetas,generador, bin check, bin search, bin find, find bin, check bin, search bin, bank identification number, bin, iin, issuer identification number, check iin, find iin, search iin, iin check, iin search, iin find, bank, card search, card check, card find, merchant bin, merchant, bin lookup, bin checker, bin list, carding, carder, generate cc, namso, ccgen, credit card, infocc, bin, gerador de cartões de créditos, tarjetas, generator, darkside, checker cc, gerador, bins, gerar cc, mastercard, visa, amex, discover, diners club" />
+    <meta name="author" content="SAMPLIFE" />
+    <link rel="icon" href="assets/img/cc.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
-            background-image: url('https://media.giphy.com/media/4ydWTcMBjimLbT1CHi/giphy-downsized-large.gif');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-        }
-
-        .title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 36px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hh-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .p {
-            margin-top: 20px;
-            font-size: 24px;
-        }
-
-        .fa-brands {
-            font-size: 36px;
-            margin: 0 10px;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        .fa-brands:hover {
-            opacity: 1;
-        }
-
-        #console {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        .eighty {
-            max-width: 80%;
-            margin: 0 auto;
-        }
-
-        .textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-
-        .Lbutton {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .Lbutton:hover {
-            background-color: #555;
-        }
-
-        .separador {
-            margin: 20px 0;
-            border: 1px solid #ccc;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-        }
-
-        .boldy {
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .main {
-            font-size: 24px;
-        }
-
-        .info {
-            font-size: 16px;
-        }
-
-        .fa-solid {
-            margin-right: 5px;
-        }
-
-        .fa-regular {
-            margin-right: 5px;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .fa-spinner {
-            animation: spin 2s linear infinite;
+            background-image: url(assets/img/giphy.gif); /* Reemplaza 'ruta-del-archivo' con la ubicación real de tu archivo GIF */
+            background-repeat: repeat; /* Otra opción es 'no-repeat' si no quieres que se repita el fondo */
+            background-size: cover; /* Otra opción es 'contain' si prefieres que el GIF se ajuste al tamaño de la ventana del navegador */
         }
     </style>
 </head>
@@ -158,9 +37,11 @@
         </div>
     </header>
     <div id="console">
-        <div class="eighty">
-            <textarea class="textarea" id="textarea" rows="10" placeholder="Enter credit card numbers..."></textarea>
-        </div>
+        <center>
+            <div class="eighty">
+                <textarea class="textarea" id="textarea" rows="10"></textarea>
+            </div>
+        </center>
         <button id="btnChecar" class="Lbutton">
             <i class="fa-solid fa-spinner"></i> Check Card
         </button>
