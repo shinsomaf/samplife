@@ -1,86 +1,134 @@
-<!--
-YaelChecker is a totally free Mass Credit Card Checker.
-RE-WRITED BY YAEL MASSIEU.
-Telegram: @sterytools
-Insta: @is.leay
-Portfolio: https://yael.pages.dev/
--->
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SAMPLIFE - CHK</title>
-    <meta name="description" content="Credit Card Checker" />
-    <meta
-      name="keywords"
-      content="namso,ccgen,ccgen online,namso online, card, cc, bin,generador tarjetas,tarjetas,generador, bin check, bin search, bin find, find bin, check bin, search bin, bank identification number, bin, iin, issuer identification number, check iin, find iin, search iin, iin check, iin search, iin find, bank, card search, card check, card find, merchant bin, merchant, bin lookup, bin checker, bin list, carding, carder, generate cc, namso, ccgen, credit card, infocc, bin, gerador de cartões de créditos, tarjetas, generator, darkside, checker cc, gerador, bins, gerar cc, mastercard, visa, amex, discover, diners club"
-    />
-    <meta name="author" content="Samplife" />
-    <link rel="icon" href="assets/img/cc.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMPLIFE | CHK - Credit Card Checker</title>
+    <meta name="description" content="Credit Card Checker">
+    <meta name="keywords" content="namso, ccgen, ccgen online, namso online, card, cc, bin, generador tarjetas, tarjetas, generador, bin check, bin search, bin find, find bin, check bin, search bin, bank identification number, bin, iin, issuer identification number, check iin, find iin, search iin, iin check, iin search, iin find, bank, card search, card check, card find, merchant bin, merchant, bin lookup, bin checker, bin list, carding, carder, generate cc, namso, ccgen, credit card, infocc, bin, gerador de cartões de créditos, tarjetas, generator, darkside, checker cc, gerador, bins, gerar cc, mastercard, visa, amex, discover, diners club">
+    <meta name="author" content="Samplife">
+    <link rel="icon" href="assets/img/cc.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        /* Agregar estilos personalizados aquí */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Estilos para el encabezado */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header .title {
+            font-size: 24px;
+        }
+        header .hh-title {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        /* Estilos para el área de entrada de texto */
+        #console {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 20px;
+        }
+        .textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* Estilos para el botón de comprobación */
+        #btnChecar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #btnChecar:hover {
+            background-color: #555;
+        }
+        /* Estilos para el separador */
+        hr.separador {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
     <header>
-      <div class="title">
-        <img src="assets/img/cc.svg" alt="Icon" /> SAMPLIFE CHECKER
-      </div>
-      <div class="hh-title">Credit Card Checker</div>
-      <div class="p" id="cards">
-        <i class="fa-brands fa-cc-visa"></i>
-        <i class="fa-brands fa-cc-mastercard"></i>
-        <i class="fa-brands fa-cc-amex"></i>
-        <i class="fa-brands fa-cc-discover"></i>
-        <i class="fa-brands fa-cc-jcb"></i>
-        <i class="fa-brands fa-cc-diners-club"></i>
-      </div>
+        <div class="title">
+            <img src="assets/img/cc.svg" alt="Icon" /> SAMPLIFE CHECKER
+        </div>
+        <div class="hh-title">Credit Card Checker</div>
+        <div class="p" id="cards">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-discover"></i>
+            <i class="fab fa-cc-jcb"></i>
+            <i class="fab fa-cc-diners-club"></i>
+        </div>
     </header>
     <div id="console">
-      <center>
         <div class="eighty">
-          <textarea class="textarea" id="textarea" rows="10"></textarea>
+            <textarea class="textarea" id="textarea" rows="10"></textarea>
         </div>
-      </center>
-      <button id="btnChecar" class="Lbutton">
-        <i class="fa-solid fa-spinner"></i> Check Card
-      </button>
-      <div id="datos"></div>
-      <div id="infos"></div>
+        <button id="btnChecar" class="Lbutton">
+            <i class="fas fa-spinner"></i> Check Card
+        </button>
+        <div id="datos"></div>
+        <div id="infos"></div>
     </div>
     <hr class="separador" />
     <footer>
-      <p class="boldy main"><i class="fa-solid fa-globe"></i> Samplife</p>
-      <p class="boldy info">
-        <i class="fa-solid fa-circle-info"></i> Samplife is a totally free
-        Mass Credit Card Checker
-      </p>
-      <p class="boldy">
-        <i class="fa-solid fa-heart"></i> Free, No Ads & Open Source
-      </p>
-      <p class="boldy">
-        <i class="fa-regular fa-credit-card"></i> SC:
-        <a href="https://github.com/yaelsito/YaelChecker" target="_blank">Here</a>
-      </p>
-      <p class="boldy info">
-        <i class="fa-regular fa-copyright"></i> Copyright:
-        <span id="date"></span>
-      </p>
+        <p class="boldy main"><i class="fas fa-globe"></i> Samplife</p>
+        <p class="boldy info">
+            <i class="far fa-circle-info"></i> Samplife is a totally free Mass Credit Card Checker
+        </p>
+        <p class="boldy">
+            <i class="far fa-heart"></i> Free, No Ads & Open Source
+        </p>
+        <p class="boldy">
+            <i class="far fa-credit-card"></i> SC:
+            <a href="https://github.com/yaelsito/YaelChecker" target="_blank" rel="noopener">Here</a>
+        </p>
+        <p class="boldy info">
+            <i class="far fa-copyright"></i> Copyright:
+            <span id="date"></span>
+        </p>
     </footer>
     <script src="assets/js/engine.js"></script>
-  </body>
+</body>
 </html>
