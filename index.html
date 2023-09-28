@@ -24,8 +24,8 @@
         /* Estilos generales */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #192a56; /* Fondo azul marino */
+            color: #fff;
         }
 
         container {
@@ -37,7 +37,6 @@
         /* Estilos para el encabezado */
         header {
             background-color: #333;
-            color: #fff;
             text-align: center;
             padding: 20px 0;
         }
@@ -53,12 +52,13 @@
 
         /* Estilos para el área de entrada de texto */
         #console {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.1); /* Ventana de entrada con transparencia */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
             text-align: center;
-            margin: 20px 0;
+            margin: 20px auto; /* Centro la ventana de entrada */
+            max-width: 500px; /* Ancho máximo para una mejor experiencia de usuario */
         }
 
         .textarea {
@@ -96,7 +96,6 @@
         /* Estilos para el pie de página */
         footer {
             background-color: #333;
-            color: #fff;
             text-align: center;
             padding: 20px 0;
         }
@@ -123,7 +122,7 @@
     <container>
         <div id="console">
             <div class="eighty">
-                <textarea class="textarea" id="textarea" rows="10"></textarea>
+                <textarea class="textarea" id="textarea" rows="10" placeholder="Escribe tu número de tarjeta aquí"></textarea>
             </div>
             <button id="btnChecar" class="Lbutton">
                 <i class="fas fa-spinner"></i> Check Card
