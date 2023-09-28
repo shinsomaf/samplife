@@ -15,23 +15,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
-            background: transparent; /* Elimina el fondo de imagen */
-        }
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
+            background-image: url(assets/img/godn.png); /* Reemplaza 'ruta-del-archivo' con la ubicación real de tu archivo GIF */
+            background-repeat: repeat; /* Otra opción es 'no-repeat' si no quieres que se repita el fondo */
+            background-size: contain; /* Otra opción es 'contain' si prefieres que el GIF se ajuste al tamaño de la ventana del navegador */
         }
     </style>
 </head>
 <body>
-    <video autoplay loop muted>
-        <source src="assets/img/galaxy.mp4" type="galaxy/mp4">
-        Tu navegador no soporta la etiqueta de video.
-    </video>
     <header>
         <div class="title">
             <img src="assets/img/mugiwara.png" alt="Icon" /> Samplife
