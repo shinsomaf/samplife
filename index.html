@@ -11,12 +11,12 @@
     />
     <meta name="author" content="SAMPLIFE" />
     <link rel="icon" href="assets/img/mugiwara.png" /> <!-- Cambia el nombre del icono -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    /> <!-- Agrega la fuente "Monoton" -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -26,11 +26,26 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      /* Ajusta el tamaño del fondo del GIF */
-      body {
-        background-image: url('assets/img/giphy.gif'); /* Ruta al GIF de fondo */
-        background-size: contain; /* Ajusta el tamaño del fondo al tamaño del contenido */
-        background-repeat: no-repeat;
+      /* Cambiar la fuente de la clase .title y .hh-title */
+      .title, .hh-title {
+        font-family: 'Monoton', cursive;
+      }
+
+      /* Agregar efecto de rebote a los íconos */
+      .p i {
+        animation: bounce 1s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
       }
     </style>
   </head>
