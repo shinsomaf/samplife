@@ -10,14 +10,22 @@
       content="namso,ccgen,ccgen online,namso online, card, cc, bin,generador tarjetas,tarjetas,generador, bin check, bin search, bin find, find bin, check bin, search bin, bank identification number, bin, iin, issuer identification number, check iin, find iin, search iin, iin check, iin search, iin find, bank, card search, card check, card find, merchant bin, merchant, bin lookup, bin checker, bin list, carding, carder, generate cc, namso, ccgen, credit card, infocc, bin, gerador de cartões de créditos, tarjetas, generator, darkside, checker cc, gerador, bins, gerar cc, mastercard, visa, amex, discover, diners club"
     />
     <meta name="author" content="SAMPLIFE" />
-    <link rel="icon" href="assets/img/mugiwara.png" /> <!-- Cambia el nombre del icono -->
+    <link rel="icon" href="assets/img/mugiwara.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
       rel="stylesheet"
-    /> <!-- Agrega la fuente "Monoton" -->
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/style.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -26,40 +34,86 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      /* Agregar el GIF de fondo */
       body {
-        background-image: url('assets/img/giphy.gif'); /* Ruta al GIF de fondo */
-        background-size: cover; /* Ajusta el tamaño del fondo al tamaño de la ventana */
-        background-repeat: no-repeat;
-        font-family: 'Monoton', cursive; /* Cambiar la fuente de la clase .title y .hh-title */
+        background-image: url("assets/img/godn.jpg");
+        background-repeat: repeat;
+        background-size: contain;
+        text-align: center; /* Centra el texto en el cuerpo */
       }
 
-      /* Agregar efecto de "glitch" a los íconos */
-      .p i {
+      /* Agrega animaciones de color a los iconos de tarjeta */
+      .fa-brands {
         position: relative;
-        animation: glitch 1s infinite;
+        animation: changeColor 2s infinite alternate;
       }
 
-      @keyframes glitch {
-        0% {
-          transform: translateX(0);
-        }
-        25% {
-          transform: translateX(3px);
+      /* Define el keyframes para el cambio de color */
+      @keyframes changeColor {
+        50% {
+          color: #b9ffec; /* Azul claro */
         }
         50% {
-          transform: translateX(-3px);
+          color: #fff1b9; /* Amarillo */
         }
-        75% {
-          transform: translateX(2px);
+        50% {
+          color: #ffcab9; /* Rosado */
         }
+        50% {
+          color: #b9ffd1; /* Verde */
+        }
+        50% {
+          color: #b9ffec; /* Vuelve a azul claro */
+        }
+      }
+
+      .textarea {
+        background: transparent;
+        border: none;
+        color: #fff;
+        padding: 10px;
+        width: 100%;
+        outline: none;
+      }
+
+      /* Elimina el borde azul del enfoque */
+      .textarea:focus {
+        outline: none;
+      }
+
+      /* Estilo del botón "Check Card" */
+      #btnChecar {
+        background-color: #4caf50; /* Color de fondo verde */
+        color: white; /* Color del texto blanco */
+        padding: 10px 20px; /* Espaciado interior del botón */
+        border: none; /* Elimina el borde del botón */
+        border-radius: 5px; /* Añade esquinas redondeadas */
+        cursor: pointer; /* Cambia el cursor al pasar por encima */
+        transition: background-color 0.3s; /* Transición suave del color de fondo */
+        display: block; /* Hace que el botón ocupe todo el ancho disponible */
+        margin: 0 auto; /* Centra el botón horizontalmente */
+      }
+
+      /* Estilo del botón al pasar el cursor por encima */
+      #btnChecar:hover {
+        background-color: #45a049; /* Color de fondo verde más oscuro */
+      }
+
+      /* Estilo del ícono de spinner */
+      .fa-spinner {
+        animation: spin 2s linear infinite; /* Animación de giro */
+      }
+
+      /* Define el keyframes para la animación de giro */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        } /* Inicio de la rotación */
         100% {
-          transform: translateX(-2px);
-        }
+          transform: rotate(360deg);
+        } /* Completa una vuelta completa (360 grados) */
       }
     </style>
   </head>
-
   <body>
     <header>
       <div class="title">
@@ -76,29 +130,33 @@
       </div>
     </header>
     <div id="console">
-      <center>
-        <div class="eighty">
-          <textarea class="textarea" id="textarea" rows="10"></textarea>
-        </div>
-      </center>
+      <div class="eighty" style="margin: 0 auto; text-align: center;">
+        <textarea
+          class="textarea"
+          id="textarea"
+          rows="10"
+          placeholder="Ingrese la lista de tarjetas aquí"
+        ></textarea>
+      </div>
       <button id="btnChecar" class="Lbutton">
         <i class="fa-solid fa-spinner"></i> Check Card
       </button>
       <div id="datos"></div>
       <div id="infos"></div>
     </div>
-    <footer>
+    <footer style="text-align: center;">
       <p class="boldy main"><i class="fa-solid fa-globe"></i> SAMPLIFE</p>
       <p class="boldy info">
-        <i class="fa-solid fa-circle-info"></i> SAMPLIFE is a totally free
-        Mass Credit Card Checker
+        <i class="fa-solid fa-circle-info"></i> SAMPLIFE is a totally free Mass Credit Card Checker
       </p>
       <p class="boldy">
         <i class="fa-solid fa-heart"></i> Free, No Ads & Open Source
       </p>
       <p class="boldy">
         <i class="fa-solid fa-code"></i> SOURCE CODE
-        <a href="https://github.com/yaelsito/YaelChecker" target="_blank"
+        <a
+          href="https://github.com/yaelsito/YaelChecker"
+          target="_blank"
           >HERE</a
         >
       </p>
