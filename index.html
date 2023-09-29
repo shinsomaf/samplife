@@ -1,47 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAMPLIFE | CHECKER</title>
     <meta name="description" content="Credit Card Checker">
-    <meta name="keywords" content="namso,ccgen,ccgen online,namso online, card, cc, bin,generador tarjetas,tarjetas,generador, bin check, bin search, bin find, find bin, check bin, search bin, bank identification number, bin, iin, issuer identification number, check iin, find iin, search iin, iin check, iin search, iin find, bank, card search, card check, card find, merchant bin, merchant, bin lookup, bin checker, bin list, carding, carder, generate cc, namso, ccgen, credit card, infocc, bin, gerador de cartões de créditos, tarjetas, generator, darkside, checker cc, gerador, bins, gerar cc, mastercard, visa, amex, discover, diners club">
+    <meta name="keywords" content="credit card, checker, card generator, bin lookup">
     <meta name="author" content="SAMPLIFE">
     <link rel="icon" href="assets/img/mugiwara.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;500&display=swap">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
         body {
             background-image: url("assets/img/giphy.gif");
             background-repeat: repeat;
-            background-size: cover; /* Cambiado a 'cover' para que la imagen se ajuste al tamaño de la ventana del navegador */
+            background-size: cover;
+            margin: 0; /* Eliminar margen predeterminado */
+            font-family: 'Poppins', sans-serif;
         }
         header {
             text-align: center;
-            color: #ffffff; /* Cambiar el color del texto a blanco */
+            color: #fff;
             font-family: 'Orbitron', sans-serif;
-            font-size: 24px;
-            margin-top: 20px;
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffcc00;
+            font-weight: 600;
+            font-size: 2.5rem;
         }
         .title img {
-            width: 40px; /* Ajustar el tamaño del icono */
-            height: 40px; /* Ajustar el tamaño del icono */
+            width: 40px;
+            height: 40px;
             margin-right: 10px;
         }
-        .hh-title {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600; /* Aumentar el peso de la fuente */
-            font-size: 28px; /* Aumentar el tamaño de la fuente */
-            color: #ffcc00; /* Cambiar el color del texto a amarillo */
-        }
         .p i {
-            font-size: 36px; /* Aumentar el tamaño de los iconos */
-            color: #ffcc00; /* Cambiar el color de los iconos a amarillo */
-            margin: 0 10px; /* Agregar espacio entre los iconos */
-            animation: bounce 2s infinite; /* Agregar una animación de rebote */
+            font-size: 2.25rem;
+            color: #ffcc00;
+            margin: 0 10px;
+            animation: bounce 2s infinite;
         }
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
@@ -53,6 +55,68 @@
             60% {
                 transform: translateY(-10px);
             }
+        }
+        #console {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .eighty {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        .textarea {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            resize: none;
+        }
+        .Lbutton {
+            background-color: #ffcc00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .Lbutton:hover {
+            background-color: #ff9900;
+        }
+        #datos, #infos {
+            margin-top: 1rem;
+            color: #fff;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .boldy {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .main {
+            font-size: 1.25rem;
+        }
+        .info {
+            font-size: 0.875rem;
+        }
+        #date {
+            color: #ffcc00;
+        }
+        .fa-globe, .fa-circle-info, .fa-heart, .fa-code {
+            margin-right: 5px;
+        }
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -72,11 +136,9 @@
         </div>
     </header>
     <div id="console">
-        <center>
-            <div class="eighty">
-                <textarea class="textarea" id="textarea" rows="10"></textarea>
-            </div>
-        </center>
+        <div class="eighty">
+            <textarea class="textarea" id="textarea" rows="10"></textarea>
+        </div>
         <button id="btnChecar" class="Lbutton">
             <i class="fa-solid fa-spinner"></i> Check Card
         </button>
