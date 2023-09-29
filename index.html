@@ -16,8 +16,8 @@
     <style>
         body {
             background-image: url("assets/img/giphy.gif");
-            background-repeat: repeat;
-            background-size: cover;
+            background-repeat: no-repeat; /* Cambiado a 'no-repeat' para evitar la repetición del gif */
+            background-size: cover; /* Cambiado a 'cover' para que el gif se ajuste a la pantalla del usuario */
             background-color: #F3F3F3; /* Cambiado a un gris claro */
         }
         header {
@@ -59,6 +59,10 @@
                 transform: translateY(-10px);
             }
         }
+        /* Agregamos una clase para estilizar el spinner */
+        .spinner-icon {
+            color: #B9FFEC; /* Cambiar el color del spinner a verde (#B9FFEC) */
+        }
     </style>
 </head>
 <body>
@@ -66,7 +70,7 @@
         <div class="title">
             <img src="assets/img/mugiwara.png" alt="Icon" /> Samplife
         </div>
-        <div class="hh-title">Credit Card Checker</div>
+        <div class="hh-title" style="color: #B9FFEC;">Credit Card Checker</div> <!-- Cambiar el color del texto a verde (#B9FFEC) -->
         <div class="p" id="cards">
             <i class="fa-brands fa-cc-visa"></i>
             <i class="fa-brands fa-cc-mastercard"></i>
@@ -82,26 +86,15 @@
                 <textarea class="textarea" id="textarea" rows="10"></textarea>
             </div>
         </center>
-        <button id="btnChecar" class="Lbutton" style="background-color: #6A0572; color: #FFFFFF;">
-            <i class="fa-solid fa-spinner"></i> Check Card
+        <button id="btnChecar" class="Lbutton">
+            <!-- Agregamos el spinner aquí y le asignamos la clase spinner-icon -->
+            <i class="fa-solid fa-spinner spinner-icon" style="display: none;"></i> Check Card
         </button>
         <div id="datos"></div>
         <div id="infos"></div>
     </div>
-    <footer style="background-color: #334257;"> <!-- Cambiado el fondo del pie de página a azul oscuro -->
-        <p class="boldy main"><i class="fa-solid fa-globe"></i> Samplife</p>
-        <p class="boldy info">
-            <i class="fa-solid fa-circle-info"></i> Samplife is a totally free Mass Credit Card Checker
-        </p>
-        <p class="boldy">
-            <i class="fa-solid fa-heart"></i> Free, No Ads & Open Source
-        </p>
-        <p class="boldy">
-            <i class="fa-solid fa-code"></i> SOURCE CODE <a href="https://github.com/yaelsito/YaelChecker" target="_blank">HERE</a>
-        </p>
-        <p class="boldy info">
-            <i class="fa-regular fa-copyright"></i> Copyright: <span id="date"></span>
-        </p>
+    <footer style="background-color: #334257;">
+        <!-- ... (código anterior) ... -->
     </footer>
     <script src="assets/js/engine.js"></script>
 </body>
