@@ -10,43 +10,38 @@
     <link rel="icon" href="assets/img/mugiwara.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
         body {
             background-image: url("assets/img/giphy.gif");
-            background-repeat: no-repeat; /* Cambiado a 'no-repeat' para evitar la repetición del gif */
-            background-size: cover; /* Cambiado a 'cover' para que el gif se ajuste a la pantalla del usuario */
-            background-color: #F3F3F3; /* Cambiado a un gris claro */
+            background-repeat: repeat;
+            background-size: cover; /* Cambiado a 'cover' para que la imagen se ajuste al tamaño de la ventana del navegador */
         }
         header {
             text-align: center;
-            color: #334257; /* Cambiar el color del texto a azul oscuro */
-            font-family: 'Montserrat', sans-serif;
+            color: #ffffff; /* Cambiar el color del texto a blanco */
+            font-family: 'Orbitron', sans-serif;
             font-size: 24px;
             margin-top: 20px;
-            background-color: #334257; /* Cambiado el fondo del encabezado a azul oscuro */
         }
         .title img {
-            width: 40px;
-            height: 40px;
+            width: 40px; /* Ajustar el tamaño del icono */
+            height: 40px; /* Ajustar el tamaño del icono */
             margin-right: 10px;
         }
         .hh-title {
             font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 32px;
-            color: #FF6B6B; /* Cambiar el color del título a rojo */
+            font-weight: 600; /* Aumentar el peso de la fuente */
+            font-size: 28px; /* Aumentar el tamaño de la fuente */
+            color: #ffcc00; /* Cambiar el color del texto a amarillo */
         }
         .p i {
-            font-size: 24px;
-            color: #FF6B6B; /* Cambiar el color de los iconos a rojo */
-            margin: 0 10px;
-            animation: bounce 2s infinite;
-            background-color: #FF6B6B; /* Cambiar el fondo de los iconos a rojo */
-            border-radius: 50%; /* Hacer que los iconos tengan forma de círculo */
-            padding: 10px; /* Agregar espacio alrededor de los iconos */
+            font-size: 36px; /* Aumentar el tamaño de los iconos */
+            color: #ffcc00; /* Cambiar el color de los iconos a amarillo */
+            margin: 0 10px; /* Agregar espacio entre los iconos */
+            animation: bounce 2s infinite; /* Agregar una animación de rebote */
         }
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
@@ -59,10 +54,6 @@
                 transform: translateY(-10px);
             }
         }
-        /* Agregamos una clase para estilizar el spinner */
-        .spinner-icon {
-            color: #B9FFEC; /* Cambiar el color del spinner a verde (#B9FFEC) */
-        }
     </style>
 </head>
 <body>
@@ -70,7 +61,7 @@
         <div class="title">
             <img src="assets/img/mugiwara.png" alt="Icon" /> Samplife
         </div>
-        <div class="hh-title" style="color: #B9FFEC;">Credit Card Checker</div> <!-- Cambiar el color del texto a verde (#B9FFEC) -->
+        <div class="hh-title">Credit Card Checker</div>
         <div class="p" id="cards">
             <i class="fa-brands fa-cc-visa"></i>
             <i class="fa-brands fa-cc-mastercard"></i>
@@ -87,14 +78,25 @@
             </div>
         </center>
         <button id="btnChecar" class="Lbutton">
-            <!-- Agregamos el spinner aquí y le asignamos la clase spinner-icon -->
-            <i class="fa-solid fa-spinner spinner-icon" style="display: none;"></i> Check Card
+            <i class="fa-solid fa-spinner"></i> Check Card
         </button>
         <div id="datos"></div>
         <div id="infos"></div>
     </div>
-    <footer style="background-color: #334257;">
-        <!-- ... (código anterior) ... -->
+    <footer>
+        <p class="boldy main"><i class="fa-solid fa-globe"></i> Samplife</p>
+        <p class="boldy info">
+            <i class="fa-solid fa-circle-info"></i> Samplife is a totally free Mass Credit Card Checker
+        </p>
+        <p class="boldy">
+            <i class="fa-solid fa-heart"></i> Free, No Ads & Open Source
+        </p>
+        <p class="boldy">
+            <i class="fa-solid fa-code"></i> SOURCE CODE <a href="https://github.com/yaelsito/YaelChecker" target="_blank">HERE</a>
+        </p>
+        <p class="boldy info">
+            <i class="fa-regular fa-copyright"></i> Copyright: <span id="date"></span>
+        </p>
     </footer>
     <script src="assets/js/engine.js"></script>
 </body>
